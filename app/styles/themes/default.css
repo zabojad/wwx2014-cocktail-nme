@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+}
+.application {
+	position: relative;
+}
+video {
+	width: 100%; height: 100%;
+}
+.controls {
+	position: absolute;
+	bottom: 0; left: 0;
+	width: 100%; height: 50px;
+}
+.playBtn, .pauseBtn, .soundBtn, .timeline, .slider, .slider div {
+	vertical-align: top;
+	height: 50px; color: #FFF;
+}
+.playBtn, .pauseBtn, .soundBtn, .timeline {
+	float: left;
+}
+.playBtn, .pauseBtn, .soundBtn, .slider, .slider div {
+	cursor: pointer;
+	user-select: none;
+}
+.playBtn, .pauseBtn, .soundBtn {
+	width: 50px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% auto;
+}
+.playBtn, .pauseBtn {
+	margin-left: 2px;
+}
+.playBtn {
+	background-image: url('../../images/play.png');
+}
+.pauseBtn {
+	background-image: url('../../images/pause.png');
+}
+.soundBtn {
+	background-image: url('../../images/sound_01.png');
+}
+.sound-off .soundBtn {
+	background-image: url('../../images/sound_02.png');
+}
+.timeline {
+	width: 535px;
+	background-image: url('../../images/timeline.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.slider {
+	position: relative;
+	height: 100%; width: 93%; margin-left: 3%;
+}
+.slider div {
+	position: absolute;
+	width: 13px; left: -6px;
+	background-image: url('../../images/cursor.png');
+}

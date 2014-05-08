@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>My App</title>
+        <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .embed {
+            width: 640px;
+            height: 360px;
+            margin-bottom: 10px;
+        }
+        </style>
+    </head>
+    <body>
+
+        <iframe src="my-app.html" 
+                frameborder="no" 
+                scrolling="no"
+                allowfullscreen="yes"
+                class="embed embed-js">
+
+        </iframe>
+
+        <div id="embed-flash" class="embed"></div>
+
+        <script src='//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' type="text/javascript"></script>
+        <script type="text/javascript">
+            (function(){
+                var params = {
+                        scale : 'noscale',
+                        bgcolor : '#000000',
+                        allowFullScreen : true
+                    };
+                swfobject.embedSWF('my-app.swf', 'embed-flash', 640, 360, '10.2', null, {}, params, {}, function(){});
+            })();
+        </script>
+
+    </body>
+</html>

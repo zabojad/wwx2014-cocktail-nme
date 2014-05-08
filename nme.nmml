@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+	<app main="myapp.App" path="bin/export" file="MyApp"/>
+	<meta title="MyApp" package="mycomp.myapp" version="1.0.0" company="My Company" />
+	<window width="640" height="480" fps="30" resizable="true" background="0x000000" alphaBuffer="true"  />
+
+	<classpath name="src" />
+
+	<haxelib name="nme" />
+	<haxelib name="Cocktail" />
+
+	<assets path="app" include="*" rename="" />
+
+	<ndll name="std" />
+	<ndll name="regexp" />
+	<ndll name="zlib" />
+	<ndll name="nme" haxelib="nme" />
+
+	<compilerflag name="--remap js:cocktail" />
+
+</project>

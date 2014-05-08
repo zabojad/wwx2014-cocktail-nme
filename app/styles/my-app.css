@@ -1,0 +1,13 @@
+.placeholder {
+	display:none;
+}
+
+.application.pausing .pauseBtn {
+
+	display: none;
+}
+
+.application.playing .playBtn {
+
+	display: none;
+}
