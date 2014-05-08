@@ -1,6 +1,15 @@
 body {
 	margin: 0;
 }
+.placeholder {
+	display: none;
+}
+.application.pausing .pauseBtn {
+	display: none;
+}
+.application.playing .playBtn {
+	display: none;
+}
 .application {
 	position: relative;
 }
@@ -14,7 +23,7 @@ video {
 }
 .playBtn, .pauseBtn, .soundBtn, .timeline, .slider, .slider div {
 	vertical-align: top;
-	height: 50px; color: #FFF;
+	height: 50px;
 }
 .playBtn, .pauseBtn, .soundBtn, .timeline {
 	float: left;

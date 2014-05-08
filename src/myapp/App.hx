@@ -15,8 +15,11 @@ class App {
 		cocktail.loadURL(appUrl);
 
 		#if (flash || nme)
-        	//for flash and openfl, attach to stage
+        	//for flash and nme, attach to stage
         	flash.Lib.current.addChild(cocktail.root);
+    	#end
+    	#if nme
+    		flash.Lib.current.stage.frameRate = 60;
     	#end
 
 		var window = cocktail.window;

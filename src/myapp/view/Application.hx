@@ -21,21 +21,20 @@ class Application {
 
 	public function new(window : DOMWindow) {
 
-		this.elt = window.document.getElementById("my-app");
+		this.elt = window.document.getElementById("my-app");trace(elt.innerHTML);
 
 		this.playBtn = new Button(elt.querySelector(SELECTOR_PLAY_BTN));
 		this.plauseBtn = new Button(elt.querySelector(SELECTOR_PAUSE_BTN));
 		this.soundBtn = new Button(elt.querySelector(SELECTOR_SOUND_BTN));
 		this.timeline = new Timeline(elt.querySelector(SELECTOR_TIMELINE_BTN));
-/*
-		this.videoElt = cast elt.querySelector(SELECTOR_VIDEO_BTN);
 
+		this.videoElt = cast elt.querySelector(SELECTOR_VIDEO_BTN);
+/*
 		videoElt.addEventListener("ended", function(?_){ onVideoEnded(); });
 		videoElt.addEventListener("timeupdate", function(?_){ onPositionChanged(videoElt.currentTime); });
 		videoElt.addEventListener("durationchange", function(?_){ onDurationChanged(videoElt.duration); });
 		videoElt.addEventListener("playing", function(?_){ onVideoPlay(); });
-		videoElt.addEventListener("pause", function(?_){ onVideoPause(); });
-*/
+		videoElt.addEventListener("pause", function(?_){ onVideoPause(); });*/
 	}
 
 	var elt : Element;
@@ -79,22 +78,22 @@ class Application {
 
 	public function seek(v : Float) : Void {
 
-		// videoElt.currentTime = v;
+		videoElt.currentTime = v;
 	}
 
 	public function play() : Void {
 
-		// videoElt.play();
+		videoElt.play();
 	}
 
 	public function pause() : Void {
 
-		// videoElt.pause();
+		videoElt.pause();
 	}
 
 	public function setSoundOn(v : Bool) : Void {
 
-		// videoElt.volume = v ? 1.0 : 0.0;
+		videoElt.volume = v ? 1.0 : 0.0;
 
 		if (v) {
 

@@ -20,7 +20,7 @@ class Controller {
 	function initMvc() : Void {
 
 		state.onPlayingChanged = function() {
-
+trace("state.playing= "+state.playing);
 				if (state.playing) {
 
 					application.play();
@@ -91,5 +91,6 @@ class Controller {
 					application.seek(s * state.duration);
 				}
 			}
+trace("initMvc done");
 	}
 }

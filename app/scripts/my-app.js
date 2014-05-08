@@ -174,11 +174,28 @@ myapp.State.prototype = {
 };
 myapp.view = {};
 myapp.view.Application = function(window) {
+	var _g = this;
 	this.elt = window.document.getElementById("my-app");
 	this.playBtn = new myapp.view.Button(this.elt.querySelector(".playBtn"));
 	this.plauseBtn = new myapp.view.Button(this.elt.querySelector(".pauseBtn"));
 	this.soundBtn = new myapp.view.Button(this.elt.querySelector(".soundBtn"));
 	this.timeline = new myapp.view.Timeline(this.elt.querySelector(".timeline"));
+	this.videoElt = this.elt.querySelector("video");
+	this.videoElt.addEventListener("ended",function(_) {
+		_g.onVideoEnded();
+	});
+	this.videoElt.addEventListener("timeupdate",function(_1) {
+		_g.onPositionChanged(_g.videoElt.currentTime);
+	});
+	this.videoElt.addEventListener("durationchange",function(_2) {
+		_g.onDurationChanged(_g.videoElt.duration);
+	});
+	this.videoElt.addEventListener("playing",function(_3) {
+		_g.onVideoPlay();
+	});
+	this.videoElt.addEventListener("pause",function(_4) {
+		_g.onVideoPause();
+	});
 };
 myapp.view.Application.__name__ = true;
 myapp.view.Application.prototype = {
@@ -200,12 +217,16 @@ myapp.view.Application.prototype = {
 		}).concat(["pausing"]).join(" ");
 	}
 	,seek: function(v) {
+		this.videoElt.currentTime = v;
 	}
 	,play: function() {
+		this.videoElt.play();
 	}
 	,pause: function() {
+		this.videoElt.pause();
 	}
 	,setSoundOn: function(v) {
+		if(v) this.videoElt.volume = 1.0; else this.videoElt.volume = 0.0;
 		if(v) this.elt.className = this.elt.className.split(" ").filter(function(c) {
 			return c != "sound-off";
 		}).join(" "); else this.elt.className = this.elt.className.split(" ").filter(function(c1) {
