@@ -1,14 +1,5 @@
-body {
-	margin: 0;
-}
-.placeholder {
-	display: none;
-}
-.application.pausing .pauseBtn {
-	display: none;
-}
-.application.playing .playBtn {
-	display: none;
+body, .application {
+	margin: 0; background: transparent;
 }
 .application {
 	position: relative;

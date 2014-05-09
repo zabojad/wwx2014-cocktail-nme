@@ -21,7 +21,7 @@ class Application {
 
 	public function new(window : DOMWindow) {
 
-		this.elt = window.document.getElementById("my-app");trace(elt.innerHTML);
+		this.elt = window.document.getElementById("my-app");
 
 		this.playBtn = new Button(elt.querySelector(SELECTOR_PLAY_BTN));
 		this.plauseBtn = new Button(elt.querySelector(SELECTOR_PAUSE_BTN));
@@ -29,12 +29,12 @@ class Application {
 		this.timeline = new Timeline(elt.querySelector(SELECTOR_TIMELINE_BTN));
 
 		this.videoElt = cast elt.querySelector(SELECTOR_VIDEO_BTN);
-/*
+
 		videoElt.addEventListener("ended", function(?_){ onVideoEnded(); });
 		videoElt.addEventListener("timeupdate", function(?_){ onPositionChanged(videoElt.currentTime); });
 		videoElt.addEventListener("durationchange", function(?_){ onDurationChanged(videoElt.duration); });
 		videoElt.addEventListener("playing", function(?_){ onVideoPlay(); });
-		videoElt.addEventListener("pause", function(?_){ onVideoPause(); });*/
+		videoElt.addEventListener("pause", function(?_){ onVideoPause(); });
 	}
 
 	var elt : Element;
