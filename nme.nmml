@@ -10,7 +10,18 @@
 	<haxelib name="nme" />
 	<haxelib name="Cocktail" />
 
-	<assets path="app" rename="" include="*" exclude="*.swf|index.html|*.js" />
+	<assets from="app/" embed="true" >
+		<asset name="my-app.html" />
+		<asset name="styles/my-app.css" />
+		<asset name="styles/themes/default.css" />
+		<asset name="videos/wwx2014.mp4" />
+		<asset name="images/cursor.png" />
+		<asset name="images/pause.png" />
+		<asset name="images/play.png" />
+		<asset name="images/sound_01.png" />
+		<asset name="images/sound_02.png" />
+		<asset name="images/timeline.png" />
+	</assets>
 
 	<ndll name="std" />
 	<ndll name="regexp" />
