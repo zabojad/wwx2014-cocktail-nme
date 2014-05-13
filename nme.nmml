@@ -10,7 +10,7 @@
 	<haxelib name="nme" />
 	<haxelib name="Cocktail" />
 
-	<assets from="app/" embed="true" >
+	<assets from="app/" embed="false" >
 		<asset name="my-app.html" />
 		<asset name="styles/my-app.css" />
 		<asset name="styles/themes/default.css" />

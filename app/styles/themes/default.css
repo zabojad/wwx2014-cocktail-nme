@@ -1,5 +1,6 @@
 body, .application {
 	margin: 0; background-color: transparent;
+	width: 100%; height: 100%;
 }
 .application {
 	position: relative;
@@ -16,7 +17,7 @@ video {
 	vertical-align: top;
 	height: 50px;
 }
-.playBtn, .pauseBtn, .soundBtn, .timeline {
+.playBtn, .pauseBtn {
 	float: left;
 }
 .playBtn, .pauseBtn, .soundBtn, .slider, .slider div {
@@ -39,13 +40,14 @@ video {
 	background-image: url('../../images/pause.png');
 }
 .soundBtn {
+	float: right; margin-top: -50px; margin-right: 2px;
 	background-image: url('../../images/sound_01.png');
 }
 .sound-off .soundBtn {
 	background-image: url('../../images/sound_02.png');
 }
 .timeline {
-	width: 535px;
+	margin-left: 53px; margin-right: 53px;
 	background-image: url('../../images/timeline.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;

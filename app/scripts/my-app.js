@@ -88,6 +88,7 @@ myapp.Controller = function(window) {
 	this.state = new myapp.State();
 	this.application = new myapp.view.Application(window);
 	this.initMvc();
+	this.state.set_playing(false);
 };
 myapp.Controller.__name__ = true;
 myapp.Controller.prototype = {
@@ -135,7 +136,7 @@ myapp.State = function() {
 	this.duration = -1;
 	this.position = -1;
 	this.soundOn = true;
-	this.playing = false;
+	this.playing = null;
 };
 myapp.State.__name__ = true;
 myapp.State.prototype = {

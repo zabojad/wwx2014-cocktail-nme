@@ -4,7 +4,7 @@ class State {
 
 	public function new() { }
 
-	public var playing (default, set) : Bool = false;
+	public var playing (default, set) : Null<Bool> = null;
 
 	public var soundOn (default, set) : Bool = true;
 
@@ -20,7 +20,7 @@ class State {
 
 	public dynamic function onDurationChanged() : Void { }
 
-	public function set_playing(v : Bool) : Bool {
+	public function set_playing(v : Null<Bool>) : Null<Bool> {
 
 		if (v == playing) {
 

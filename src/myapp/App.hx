@@ -19,7 +19,6 @@ class App {
         	flash.Lib.current.addChild(cocktail.root);
     	#end
     	#if nme
-for(ak in nme.Assets.info.keys()) { trace("Asset "+ak); }
     		flash.Lib.current.stage.frameRate = 60;
     	#end
 
