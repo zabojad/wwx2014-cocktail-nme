@@ -6,6 +6,7 @@
 
 ###Urls
 
+* [Slides of the talk](http://www.slideshare.net/thomasfetiveau/development-workflow-with-cocktail-and-nme)
 * [Haxe website](http://www.haxe.org)
 * [Cocktail repo](https://github.com/silexlabs/Cocktail)
 * [NME repo](https://github.com/haxenme/nme)
